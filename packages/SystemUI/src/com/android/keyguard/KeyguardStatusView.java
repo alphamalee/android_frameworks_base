@@ -582,6 +582,9 @@ public class KeyguardStatusView extends GridLayout implements
         if (lockClockFont == 17) {
             mClockView.setTypeface(Typeface.create("sans-serif-black", Typeface.ITALIC));
         }
+        if (lockClockFont == 18) {
+            mClockView.setTypeface(Typeface.create("neoneon-sys", Typeface.NORMAL));
+        }
     }
 
     private void refreshLockDateFont() {
@@ -641,6 +644,9 @@ public class KeyguardStatusView extends GridLayout implements
         }
         if (lockDateFont == 17) {
             mKeyguardSlice.setViewsTypeface(Typeface.create("sans-serif-black", Typeface.ITALIC));
+        }
+        if (lockDateFont == 18) {
+            mKeyguardSlice.setViewsTypeface(Typeface.create("neoneon-sys", Typeface.NORMAL));
         }
     }
 
