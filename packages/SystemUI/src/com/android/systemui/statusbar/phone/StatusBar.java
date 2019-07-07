@@ -537,7 +537,7 @@ public class StatusBar extends SystemUI implements DemoMode,
     private ScreenPinningNotify mScreenPinningNotify;
 
     // status bar notification ticker
-    private int mTickerEnabled;
+    public int mTickerEnabled;
     private Ticker mTicker;
     private boolean mTicking;
     private int mTickerAnimationMode;
@@ -1978,6 +1978,12 @@ public class StatusBar extends SystemUI implements DemoMode,
             mBackdropFront.setImageDrawable(null);
         }
     };
+
+    public void resetTrackInfo() {
+        if (mTicker != null) {
+            mTicker.resetShownMediaMetadata();
+        }
+    }
 
     public void triggerAmbientForMedia() {
         if (mAmbientMediaPlaying) {
